@@ -36,3 +36,12 @@ services:
     volumes: 
       - ./rate_limit_burst_delay/html:/var/www
       - ./rate_limit_burst_delay/conf.d:/etc/nginx/conf.d
+
+  nginx_rate_limit_burst_nodelay:
+    container_name: nginx_rate_limit_burst_nodelay
+    image: nginx:latest
+    ports:
+      - "8085:80"
+    volumes: 
+      - ./rate_limit_burst_nodelay/html:/var/www
+      - ./rate_limit_burst_nodelay/conf.d:/etc/nginx/conf.d
