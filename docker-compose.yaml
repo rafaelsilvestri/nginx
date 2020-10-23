@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  nginx_unlimited:
+    container_name: nginx_unlimited
+    image: nginx:latest
+    ports:
+      - "8081:80"
+    volumes: 
+      - ./unlimited/html:/var/www
+      - ./unlimited/conf.d:/etc/nginx/conf.d
+  
+  nginx_rate_limit:
+    container_name: nginx_rate_limit
+    image: nginx:latest
+    ports:
+      - "8082:80"
+    volumes: 
+      - ./rate_limit/html:/var/www
+      - ./rate_limit/conf.d:/etc/nginx/conf.d
+
+  nginx_rate_limit_burst:
+    container_name: nginx_rate_limit_burst
+    image: nginx:latest
+    ports:
+      - "8083:80"
+    volumes: 
+      - ./rate_limit_burst/html:/var/www
+      - ./rate_limit_burst/conf.d:/etc/nginx/conf.d
+
+  nginx_rate_limit_burst_delay:
+    container_name: nginx_rate_limit_burst_delay
+    image: nginx:latest
+    ports:
+      - "8084:80"
+    volumes: 
+      - ./rate_limit_burst_delay/html:/var/www
+      - ./rate_limit_burst_delay/conf.d:/etc/nginx/conf.d
