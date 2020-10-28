@@ -32,6 +32,17 @@ Start making requests to `burst with delay` endpoint every 0.5 second.
 $ run.sh /burst-delay 0.5
 ```
 
+You can also see a path limited but an specific enpoint `skiped` from this limit  
+LIMITTED /foo/*
+```bash
+$ run.sh /foo/bar 0.5
+```
+SKIPPED
+```bash
+$ run.sh /foo/BF3D892A38DA449BA5C7D45B78940074/bar 0
+```
+
+
 
 # References
 
