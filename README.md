@@ -37,7 +37,7 @@ LIMITTED /foo/*
 ```bash
 $ run.sh /foo/bar 0.5
 ```
-SKIPPED
+SKIPPED ^/foo/[0-9A-F]+/bar$
 ```bash
 $ run.sh /foo/BF3D892A38DA449BA5C7D45B78940074/bar 0
 ```
